@@ -12,11 +12,10 @@ const ProductListing=()=>{
         const response = await axios
         .get("https://fakestoreapi.com/products")
         .catch((err)=>{
-            console.log("err".err);
+            console.log("err",err);
         });
         //console.log(response)
         dispatch(setProducts(response.data));
-
     };
 
     useEffect(()=>{
